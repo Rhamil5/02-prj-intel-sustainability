@@ -1,1 +1,130 @@
+.timeline-item {
+  min-width: 200px; /* Minimum width for each item */
+  max-width: 220px;
+  margin-right: 20px; /* Space between items */
+  background: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  overflow-wrap: break-word; /* Wraps long words */
+  word-break: break-word;
+  transition: transform 0.2s; /* Smoothly animate scaling */
+}
+
+.timeline-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 10px auto;
+}
+
+.timeline-item h2,
+.timeline-item h3,
+.timeline-item p {
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+@media (max-width: 600px) {
+  .timeline-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;    /* Center cards horizontally */
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Optional: limit height */
+  }
+  .timeline-item {
+    margin-right: 0; /* Remove horizontal spacing */
+    margin-bottom: 20px; /* Add vertical spacing */
+    max-width: 90vw; /* Allow cards to fill most of the screen width */
+    min-width: 0;    /* Remove minimum width restriction */
+    box-sizing: border-box;
+  }
+  .timeline-item img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 10px auto;
+  }
+  .timeline-item h2,
+  .timeline-item h3,
+  .timeline-item p {
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
 /* Add your CSS here */
+body
+{
+  background: linear-gradient(to right, #396a8b, #b8d5e5); /* Gradient from light blue to green */
+  font-family: 'Roboto', Arial, sans-serif;
+  color: white;
+}
+header {
+    background-image: url('img/Background.jpg');
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Timeline styles */
+.timeline-container {
+  display: flex; /* Arrange items in a row */
+  flex-direction: row; /* Horizontal by default */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden;
+  /* white-space: nowrap;  Removed so text inside cards can wrap */
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.timeline-item {
+  min-width: 200px; /* Minimum width for each item */
+  max-width: 220px;
+  margin-right: 20px; /* Space between items */
+  background: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  overflow-wrap: break-word; /* Wraps long words */
+  word-break: break-word;
+  transition: transform 0.2s; /* Smoothly animate scaling */
+}
+
+.timeline-item img {
+  display: block;
+  max-width: 100%; /* Prevents image from spilling out */
+  height: auto;
+  margin: 0 auto 10px auto; /* Centers image and adds space below */
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: transform 0.2s; /* Smoothly animate scaling */
+}
+
+.timeline-item:hover {
+  transform: scale(1.1); /* Makes the card 10% bigger on hover */
+}
+
+/* Responsive: vertical timeline on phones */
+@media (max-width: 600px) {
+  .timeline-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;    /* Center cards horizontally */
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Optional: limit height */
+  }
+  .timeline-item {
+    margin-right: 0; /* Remove horizontal spacing */
+    margin-bottom: 20px; /* Add vertical spacing */
+  }
+}
+
+.timeline-item:hover {
+  transform: scale(1.1); /* Makes the card 10% bigger on hover */
+}
+/* End timeline styles */
