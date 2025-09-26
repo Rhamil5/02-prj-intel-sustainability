@@ -128,3 +128,6 @@ header {
   transform: scale(1.1); /* Makes the card 10% bigger on hover */
 }
 /* End timeline styles */
+.card-body{
+  background-color: aliceblue;
+}
